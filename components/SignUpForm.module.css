@@ -29,3 +29,11 @@
   color: white;
   cursor: pointer;
 }
+
+.error {
+  width: 90%;
+  padding: 5px;
+  background-color: lightcoral;
+  color: darkred;
+  text-align: center;
+}
