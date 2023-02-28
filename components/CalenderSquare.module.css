@@ -1,0 +1,7 @@
+.square {
+  border: 1px solid grey;
+}
+
+.not-current {
+  background-color: lightgray;
+}

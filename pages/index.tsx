@@ -4,6 +4,7 @@ import { Inter } from "next/font/google";
 import styles from "@component/styles/Home.module.css";
 import SignUpForm from "@component/components/SignUpForm";
 import Link from "next/link";
+import Calender from "@component/components/Calender";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <h1>Strengthlog</h1>
+      <Calender />
       <Link href="/signup">sign up</Link>
     </>
   );
