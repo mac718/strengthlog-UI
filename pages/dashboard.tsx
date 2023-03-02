@@ -5,17 +5,10 @@ type DashboardPageProps = {
 };
 
 const DashboardPage = ({ username }: DashboardPageProps) => {
-  console.log(username);
-  return (
-    <div>
-      Dashboard<div>Hi, {username}!</div>
-    </div>
-  );
+  return <div>Dashboard</div>;
 };
 
-export const getServerSideProps: GetServerSideProps<{
-  data: DashboardPageProps;
-}> = async (context) => {
+export const getServerSideProps: GetServerSideProps = async (context) => {
   console.log(context);
   const data: DashboardPageProps = { username: context.req.cookies.name };
   return { props: data };

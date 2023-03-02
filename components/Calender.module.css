@@ -1,6 +1,13 @@
 .grid {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
-  grid-template-rows: repeat(5, 1fr);
+  grid-template-rows: repeat(6, 1fr);
   height: 90vh;
+  width: 90%;
+  margin: auto;
+}
+
+.month-year-heading {
+  text-align: center;
+  width: 100vw;
 }

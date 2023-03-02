@@ -5,6 +5,8 @@ import styles from "@component/styles/Home.module.css";
 import SignUpForm from "@component/components/SignUpForm";
 import Link from "next/link";
 import Calender from "@component/components/Calender";
+import NavBar from "@component/components/NavBar";
+import { GetServerSideProps } from "next";
 
 export default function Home() {
   return (
@@ -15,7 +17,6 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <h1>Strengthlog</h1>
-      <Calender />
       <Link href="/signup">sign up</Link>
     </>
   );
