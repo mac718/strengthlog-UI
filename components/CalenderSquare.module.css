@@ -1,7 +1,13 @@
 .square {
   border: 1px solid grey;
+  color: #333;
 }
 
-.not-current {
-  background-color: lightgray;
+.not-current-month {
+  background-color: #eee;
+  color: #ccc;
+}
+
+.current-day {
+  background-color: lightgoldenrodyellow;
 }

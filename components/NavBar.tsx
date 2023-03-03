@@ -8,6 +8,7 @@ type NavBarProps = {
 const NavBar = ({ username }: NavBarProps) => {
   return (
     <nav className={styles.navbar}>
+      <div>Strengthlog</div>
       <div>
         <Link href="/calender">Calender</Link>
       </div>

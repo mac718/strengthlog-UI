@@ -52,18 +52,31 @@ const Calender = () => {
     i < daysInpreviousMonth;
     i++
   ) {
-    squares.push(<CalenderSquare date={i} dark={true} />);
+    squares.push(<CalenderSquare date={i} dark={true} currentDay={false} />);
   }
 
   //squares for current month
   for (let i = 1; i <= daysInMonth; i++) {
-    squares.push(<CalenderSquare date={i} dark={false} key={i} />);
+    let currentDay = false;
+    const today = new Date();
+    console.log(today.toDateString(), currentDate.toDateString());
+    if (
+      today.getFullYear === currentDate.getFullYear &&
+      today.getMonth() === currentDate.getMonth() &&
+      today.getDate() === i
+    ) {
+      currentDay = true;
+    }
+    squares.push(
+      <CalenderSquare date={i} dark={false} key={i} currentDay={currentDay} />
+    );
   }
 
   //squares for first few days of next month
-  console.log("last day", lastDayOfMonth(currentDate).getDay());
   for (let i = 0; i < 6 - lastDayOfMonth(currentDate).getDay(); i++) {
-    squares.push(<CalenderSquare date={i + 1} dark={true} />);
+    squares.push(
+      <CalenderSquare date={i + 1} dark={true} currentDay={false} />
+    );
   }
 
   return (
