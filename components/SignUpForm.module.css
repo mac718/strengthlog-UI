@@ -20,6 +20,11 @@
   width: 80%;
 }
 
+.no-match {
+  border-color: red;
+  background-color: salmon;
+}
+
 .button {
   width: 6em;
   height: 2em;

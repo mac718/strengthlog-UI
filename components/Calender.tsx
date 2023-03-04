@@ -59,7 +59,6 @@ const Calender = () => {
   for (let i = 1; i <= daysInMonth; i++) {
     let currentDay = false;
     const today = new Date();
-    console.log(today.toDateString(), currentDate.toDateString());
     if (
       today.getFullYear === currentDate.getFullYear &&
       today.getMonth() === currentDate.getMonth() &&
