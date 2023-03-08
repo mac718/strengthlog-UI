@@ -1,10 +1,11 @@
 .grid {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
-  grid-template-rows: repeat(6, 1fr);
+  grid-template-rows: repeat(auto-fill, 1fr);
   height: 90vh;
   width: 90%;
   margin: auto;
+  box-shadow: 1px 1px 10px 2px #aaa;
 }
 
 .month-year-heading {

@@ -1,0 +1,12 @@
+.category {
+  width: 90%;
+  background-color: lightblue;
+  padding: 5px;
+  margin: auto;
+  margin-bottom: 10px;
+}
+
+.movements {
+  width: 90%;
+  margin: auto;
+}

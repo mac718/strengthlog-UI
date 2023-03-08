@@ -5,9 +5,9 @@
   flex-direction: column;
   border: 1px solid black;
   border-radius: 8px;
-  min-height: 12rem;
-  height: 25%;
-  width: 20%;
+  min-height: 15rem;
+  height: 35%;
+  width: clamp(20%, 300px, 90%);
 }
 
 .label {
@@ -18,17 +18,26 @@
 .input {
   margin-bottom: 5px;
   width: 80%;
+  border-radius: 5px;
+  line-height: 1.5rem;
+  border: 0.5px solid gray;
+  padding: 5px;
 }
 
 .no-match {
   border-color: red;
-  background-color: salmon;
+  background-color: #ffcccb;
+}
+
+.no-match-text {
+  margin-bottom: 5px;
+  color: red;
 }
 
 .button {
   width: 6em;
   height: 2em;
-  background-color: green;
+  background-color: #00bb00;
   border-style: none;
   border-radius: 5px;
   color: white;

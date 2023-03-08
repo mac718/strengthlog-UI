@@ -8,11 +8,17 @@ const SignUpForm = () => {
   const [passwordConfirm, setPasswordConfirm] = useState("");
   const [noMatch, setNoMatch] = useState(false);
   const [error, setError] = useState("");
+  const [disabled, setDisabled] = useState(false);
 
   let passwordConfirmInputClasses = `${styles.input}`;
+  let buttonDisabled = false;
 
   if (noMatch) {
     passwordConfirmInputClasses += ` ${styles["no-match"]}`;
+  }
+
+  if (disabled) {
+    buttonDisabled = true;
   }
 
   const passwordConfirmHandler = (event: ChangeEvent<HTMLInputElement>) => {
@@ -26,6 +32,7 @@ const SignUpForm = () => {
       password[event.target.value.length - 1]
     ) {
       setNoMatch(true);
+      setDisabled(true);
     } else {
       setNoMatch(false);
     }
@@ -67,13 +74,20 @@ const SignUpForm = () => {
       <label htmlFor="confirm" className={styles.label}>
         confirm password
       </label>
+      {noMatch && (
+        <div className={styles["no-match-text"]}>passwords don't match</div>
+      )}
       <input
         type="password"
         id="confirm"
         className={passwordConfirmInputClasses}
         onChange={passwordConfirmHandler}
       />
-      <button className={styles.button} onClick={onSubmit}>
+      <button
+        className={styles.button}
+        onClick={onSubmit}
+        disabled={buttonDisabled}
+      >
         Register
       </button>
     </div>
