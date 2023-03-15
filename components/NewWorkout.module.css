@@ -9,4 +9,16 @@
 .movements {
   width: 90%;
   margin: auto;
+  padding: 5px;
+  border: 1px solid gray;
+  border-radius: 5px;
+}
+
+.selected {
+  width: 90%;
+  margin: auto;
+  padding: 5px;
+  border: 1px solid gray;
+  border-radius: 5px;
+  display: flex;
 }
